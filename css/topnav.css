@@ -1,0 +1,77 @@
+.topnav {
+    background: #333;
+    height: 40px;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+
+.topnav-menu {
+    line-height: 40px;
+}
+
+.topnav-menu a {
+    padding: 0 7px;
+    border-right: 1px solid #424242;
+}
+
+.topnav-menu a:hover {
+    color: #fff;
+}
+
+/* potential bug1: a:last-child is not correct, will
+   remove every thing!! */
+.topnav-menu li:last-child a {
+    border-right: none;
+}
+
+/* 非常小的细节，有可能对不齐下一个div */
+.topnav-menu li:first-child a {
+    padding-left: 0;
+}
+
+.topnav-cart {
+    background: #424242;
+    width: 120px;
+    height: 40px;
+    margin-left: 13px;
+    position: relative;
+}
+
+.topnav-link {
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+.topnav-link .iconfont {
+    margin-right: 3px;
+}
+
+.topnav-detail {
+    background: #fff;
+    width: 320px;
+    height: 100px;
+    position: absolute;
+    right: -1px;
+    top: 40px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: center;
+    line-height: 100px;
+    display: none;
+    box-sizing: content-box;
+}
+
+.topnav-cart:hover .topnav-detail {
+    display: block;
+    /* 约定，凡事弹出菜单：2位数， 固定菜单：3位数，*/
+    z-index: 50;
+}
+
+.topnav-cart:hover .topnav-link {
+    background: #fff;
+    color: #ff6700;
+}
